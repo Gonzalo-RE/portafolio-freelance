@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzalo | Desarrollador Web </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Desarrollador web freelance</h1>
+        <nav>
+            <a href="#sobre-mi">Sobre mi</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#proyectos">Proyectos</a>
+            <button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <h2 >Sobre mi:</h2>
+                <p>Me llamo Gonzalo Rios Encinas, 
+                   estudie la carrera de ingenieria en software 
+                   en la universidad ITSON.</p>
+
+                <p> Me gusta el desarrollo web y
+                    me gustaria poder vivir de ello siendo freelance. 
+                </p> 
+
+                <p> Resolver problemas y mejorar la calidad de servicion de las empresas por 
+                    medio de paginas web. 
+                </p>
+            
+        </section>
+        
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+
+            <div class="contenedor-proyectos">
+
+                <article class="tarjeta-proyecto">
+                    <h3>Landing Page Corporativa</h3>
+                    <p>En este proyecto se realizara una pagina web en
+                        el cual el usuario podra realizar una accion en concreta,
+                        como comprar, suscribirse a un sitio o descargar un recurso digital.
+                    </p>
+                    <button class="btn-proyecto">Ver Proyecto</button>
+                
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <h3>E-commerce AceStore</h3>
+
+                    <p>En este proeycto se realizo una pagina wep para la venta de cartas y
+                        productos de tcg.
+                    </p>
+
+                    <button class="btn-proyecto">Ver Proyecto</button>
+                
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <h3>Sistema de Citas</h3>
+
+                    <p>En este proyecto se realizara una pagana web en el cual el usuario
+                        podra realizar citas para diferentes necesidades.
+                    </p>
+
+                    <button class="btn-proyecto">Ver Proyecto</button>
+                
+                </article>
+
+            </div>
+            
+
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios:</h2>
+
+             <ol>
+                <li>Creacion de sitios web.</li>
+                <li>Diseños responsivo.</li>
+                <li>Publicidad web.</li>
+            </ol>
+
+        </section>
+
+        <section id="testimonios">
+            <h2>Testimonios de Clientes</h2>
+
+            <div id="contenedor-testimonios" class="contenedor-proyectos">
+                <p>Cargando testimonios de clientes...</p>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="contacto">
+            <h2>Contactame</h2>
+
+            <form id="form-contacto">
+
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre">
+                </div>
+
+                <div>
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" placeholder="Tu correo">
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="4" placeholder="¿En que puedo ayudarte?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-mensaje">Enviar Mensaje</button>
+
+            </form>
+            <p id="mensaje-estado"></p>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
