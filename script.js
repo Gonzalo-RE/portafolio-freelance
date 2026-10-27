@@ -3,13 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const formContacto = document.getElementById('form-contacto');
     const mensajeFeedback = document.getElementById('mensaje-feedback');
 
-    // =========================================================================
-    // URL DE LA API RESTFUL:
-    // 1. En Desarrollo Local: 'http://localhost/mi-primer-backend/public/index.php?action=api_servicios'
-    // 2. En Producción (InfinityFree / Nube): Reemplazar por tu URL HTTPS real (ejemplo abajo)
-    // =========================================================================
-    const API_URL = 'http://localhost/mi-primer-backend/public/index.php?action=api_servicios';
-    // const API_URL = 'https://gonzalo-backend.free.nf/index.php?action=api_servicios';
+   
+    const API_URL = 'https://dantenetwork.gt.tc/index.php?action=api_servicios';
+    
 
     // 1. Función asíncrona para consumir la API de Servicios Backend
     async function cargarServiciosDesdeAPI() {
