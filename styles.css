@@ -55,7 +55,7 @@ footer {
     gap: 20px;
 }
 
-.tarjeta-proyecto{
+.card-proyecto{
     background-color: #e2e8f8;
     margin: 10px;
     border-radius: 8px;
@@ -106,7 +106,7 @@ body.modo-oscuro main {
     color: #f8fafc;
 }
 
-body.modo-oscuro .tarjeta-proyecto{
+body.modo-oscuro .card-proyecto{
     background-color: #334155;
     color: white;
 }

@@ -51,7 +51,7 @@ async function cargarTestimonios() {
         //Recorre los datos y se crea tarjetas dinamicas
         usuarios.forEach(usuario => {
             const tarjeta = document.createElement('article');
-            tarjeta.className = 'tarjeta-proyecto';
+            tarjeta.className = 'card-proyecto';
             tarjeta.innerHTML = `
                 <h3>${usuario.name}</h3>
                 <p><strong>Empresa:</strong> ${usuario.company.name}</p>
