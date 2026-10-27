@@ -3,160 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonzalo | Desarrollador Web </title>
+    <title>Gonzalo Ríos | Desarrollador Web Full Stack</title>
+    <!-- Fuente Inter (Estilo Apple / Minimalista) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de Estilos -->
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
-    <header>
-        <h1>Desarrollador web freelance</h1>
-        <nav>
-            <a href="#sobre-mi">Sobre mi</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#proyectos">Proyectos</a>
-            <button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button>
-        </nav>
 
+    <!-- Encabezado y Navegación Principal -->
+    <header>
+        <div class="header-container">
+            <h1>Gonzalo Ríos <span>/ Dev</span></h1>
+            <nav>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#servicios-api">Servicios API</a>
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="sobre-mi">
-            <h2 >Sobre mi:</h2>
-                <p>Me llamo Gonzalo Rios Encinas, 
-                   estudie la carrera de ingenieria en software 
-                   en la universidad ITSON.</p>
+    <main class="contenedor">
 
-                <p> Me gusta el desarrollo web y
-                    me gustaria poder vivir de ello siendo freelance. 
-                </p> 
-
-                <p> Resolver problemas y mejorar la calidad de servicion de las empresas por 
-                    medio de paginas web. 
-                </p>
-            
+        <!-- Sección 1: Presentación / Sobre mí -->
+        <section id="sobre-mi" class="seccion-hero">
+            <span class="badge">Desarrollador Web Freelance</span>
+            <h2>Construyo experiencias web modernas, escalables y orientadas a resultados.</h2>
+            <p>
+                Especializado en el desarrollo Full Stack con **PHP 8+**, **MySQL**, **JavaScript (Fetch API)** y arquitectura **MVC**. 
+                Apasionado por crear interfaces dinámicas, código limpio y soluciones personalizadas para optimizar la presencia digital de empresas y negocios.
+            </p>
         </section>
-        
+
+        <!-- Sección 2: Proyectos Destacados -->
         <section id="proyectos">
             <h2>Proyectos Destacados</h2>
+            <p class="subtitulo-seccion">Una muestra de las aplicaciones y sitios web que he desarrollado.</p>
 
             <div class="contenedor-proyectos">
 
-                <article class="card-proyecto">
-                    <span class="badge">Backend / Fullstack</span>
-                    <h3>Sistema CMS & API RESTful (PHP / MySQL / MVC)</h3>
+                <!-- Tarjeta 1: Sistema CMS & API -->
+                <article class="tarjeta-proyecto destacada">
+                    <span class="tag-badge">Backend & API</span>
+                    <h3>Sistema CMS & API RESTful</h3>
                     <p>
-                        Panel de administración dinámico para la gestión de servicios. Implementado con patrón de arquitectura 
-                        <strong>MVC</strong>, Front Controller, encriptación BCRYPT, protección <strong>CSRF</strong>, 
-                        control de acceso por roles (<strong>RBAC</strong>) y endpoints de <strong>API RESTful</strong> en formato JSON.
+                        Panel de administración dinámico desarrollado en PHP MVC y MySQL. Incluye autenticación con BCRYPT, 
+                        seguridad contra ataques CSRF, roles de usuario (RBAC) y endpoints API RESTful.
                     </p>
-                    <div class="tags">
+                    <div class="tags-tech">
                         <span>PHP 8+</span>
                         <span>MySQL</span>
                         <span>PDO</span>
                         <span>MVC</span>
                         <span>API REST</span>
-                        <span>Seguridad</span>
                     </div>
-                    <div class="links" style="margin-top: 15px;">
-                        <a href="https://github.com/Gonzalo-RE/cms-servicios-mvc" target="_blank" class="btn">
+                    <div class="acciones-tarjeta">
+                        <a href="https://github.com/Gonzalo-RE/cms-servicios-mvc" target="_blank" class="btn-proyecto">
                             📂 Ver Código en GitHub
                         </a>
                     </div>
                 </article>
 
-                <article class="card-proyecto">
-                    <h3>Landing Page Corporativa</h3>
-
-                    <p>Página de alta conversión para un negocio de café artesanal, 
-                        con menú interactivo y pedidos por WhatsApp.
+                <!-- Tarjeta 2: Landing Page Cafetería -->
+                <article class="tarjeta-proyecto">
+                    <span class="tag-badge">Frontend Comercial</span>
+                    <h3>Landing Page Cafetería</h3>
+                    <p>
+                        Sitio web comercial de alta conversión con menú interactivo, diseño 100% responsivo y optimización SEO.
                     </p>
-
-                    <a href="https://gonzalo-re.github.io/landing-cafeteria/" 
-                       target="_blank" 
-                       class="btn-proyecto">Ver Proyecto en Vivo</a>
-                
+                    <div class="tags-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Flexbox</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="acciones-tarjeta">
+                        <a href="https://gonzalo-re.github.io/landing-cafeteria/" target="_blank" class="btn-proyecto secundario">
+                            🌐 Ver Sitio en Vivo
+                        </a>
+                    </div>
                 </article>
 
-                <article class="card-proyecto">
-                    <h3>E-commerce AceStore</h3>
-
-                    <p>En este proeycto se realizo una pagina wep para la venta de cartas y
-                        productos de tcg.
+                <!-- Tarjeta 3: AceStore E-Commerce -->
+                <article class="tarjeta-proyecto">
+                    <span class="tag-badge">E-Commerce</span>
+                    <h3>AceStore Catálogo</h3>
+                    <p>
+                        Plataforma de catálogo de productos con maquetación en cuadrícula adaptable (CSS Grid) y filtrado de productos.
                     </p>
-
-                    <button class="btn-proyecto">Ver Proyecto</button>
-                
-                </article>
-
-                <article class="card-proyecto">
-                    <h3>Sistema de Citas</h3>
-
-                    <p>En este proyecto se realizara una pagana web en el cual el usuario
-                        podra realizar citas para diferentes necesidades.
-                    </p>
-
-                    <button class="btn-proyecto">Ver Proyecto</button>
-                
+                    <div class="tags-tech">
+                        <span>HTML5</span>
+                        <span>CSS Grid</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="acciones-tarjeta">
+                        <a href="#contacto" class="btn-proyecto secundario">
+                            📩 Solicitar Demo
+                        </a>
+                    </div>
                 </article>
 
             </div>
-            
-
         </section>
 
-        <section id="servicios">
-            <h2>Servicios:</h2>
+        <!-- Sección 3: Servicios Dinámicos desde la API Backend -->
+        <section id="servicios-api">
+            <h2>Catálogo de Servicios</h2>
+            <p class="subtitulo-seccion">Datos sincronizados en tiempo real mediante nuestra API RESTful Backend.</p>
 
-             <ol>
-                <li>Creacion de sitios web.</li>
-                <li>Diseños responsivo.</li>
-                <li>Publicidad web.</li>
-            </ol>
-
-        </section>
-
-        <section id="testimonios">
-            <h2>Testimonios de Clientes</h2>
-
-            <div id="contenedor-testimonios" class="contenedor-proyectos">
-                <p>Cargando testimonios de clientes...</p>
+            <div id="contenedor-servicios" class="contenedor-proyectos">
+                <!-- Estado de carga dinámico impulsado por JavaScript -->
+                <div id="loading-state" class="loading-box">
+                    <span class="spinner"></span>
+                    <p>Conectando con la API Backend...</p>
+                </div>
             </div>
-            
+        </section>
+
+        <!-- Sección 4: Formulario de Contacto -->
+        <section id="contacto">
+            <h2>Hablemos de tu Proyecto</h2>
+            <p class="subtitulo-seccion">¿Tienes una idea en mente? Envíame un mensaje y te responderé a la brevedad.</p>
+
+            <div class="box-contacto">
+                <form id="form-contacto">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje o Detalles del Proyecto</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente tus necesidades..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <div id="mensaje-feedback" class="feedback-box"></div>
+                </form>
+            </div>
         </section>
 
     </main>
 
+    <!-- Pie de Página -->
     <footer>
-        <section id="contacto">
-            <h2>Contactame</h2>
+        <div class="footer-container">
+            <p>© 2026 Gonzalo Ríos. Desarrollador Web Freelance.</p>
 
-            <form id="form-contacto">
-
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Tu nombre">
-                </div>
-
-                <div>
-                    <label for="email">Correo:</label>
-                    <input type="email" id="email" placeholder="Tu correo">
-                </div>
-
-                <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" rows="4" placeholder="¿En que puedo ayudarte?"></textarea>
-                </div>
-
-                <button type="submit" class="btn-mensaje">Enviar Mensaje</button>
-
-            </form>
-            <p id="mensaje-estado"></p>
-        </section>
+        </div>
     </footer>
 
+    <!-- Script de Consumo de API -->
     <script src="script.js"></script>
-    
 </body>
 </html>
