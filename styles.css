@@ -1,10 +1,8 @@
-/* ==========================================================================
-   VARIABLES GLOBALES - TEMA MODO OSCURO ELEGANTE (APPLE GLASSMORPHISM)
-   ========================================================================== */
+/* Estilos Estilo Apple Glassmorphism - Portafolio Freelance */
 :root {
     --bg-main: #000000;
     --bg-card: rgba(22, 22, 23, 0.75);
-    --bg-card-hover: rgba(29, 29, 31, 0.90);
+    --bg-card-hover: rgba(29, 29, 31, 0.85);
     --border-subtle: rgba(255, 255, 255, 0.12);
     --border-focus: #0071e3;
     --text-primary: #f5f5f7;
@@ -14,19 +12,14 @@
     --accent-red: #ff453a;
     --radius-main: 18px;
     --radius-sm: 10px;
-    --shadow-apple: 0 16px 40px rgba(0, 0, 0, 0.5);
+    --shadow-apple: 0 12px 40px rgba(0, 0, 0, 0.5);
     --font-apple: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
 }
 
-/* Reset Global */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -35,21 +28,14 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.contenedor {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* ==========================================================================
-   HEADER & NAVEGACIÓN FLEXBOX
-   ========================================================================== */
+/* Header & Navegación */
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -57,20 +43,18 @@ header {
 }
 
 .header-container {
-    max-width: 1020px;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 16px 20px;
+    padding: 16px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 header h1 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    color: var(--text-primary);
 }
 
 header h1 span {
@@ -87,7 +71,7 @@ nav {
 nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -97,28 +81,49 @@ nav a:hover {
 }
 
 .btn-nav {
-    background-color: #0071e3;
+    background: #0071e3;
     color: #ffffff !important;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: 980px;
-    transition: transform 0.2s ease, background-color 0.2s ease !important;
+    transition: all 0.2s ease !important;
 }
 
 .btn-nav:hover {
-    background-color: #0077ed;
+    background: #0077ed;
     transform: scale(1.03);
 }
 
-/* ==========================================================================
-   SECCIONES Y TYPOGRAPHY
-   ========================================================================== */
-section {
-    margin-bottom: 70px;
+/* Layout General */
+.contenedor {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 50px 24px;
 }
 
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #86868B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitulo-seccion {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+/* Hero Section */
 .seccion-hero {
-    padding: 40px 0;
     text-align: left;
+    padding: 40px 0;
 }
 
 .badge {
@@ -128,35 +133,30 @@ section {
     border: 1px solid rgba(41, 151, 255, 0.3);
     padding: 6px 14px;
     border-radius: 980px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    margin-bottom: 12px;
-    background: linear-gradient(180deg, #FFFFFF 0%, #86868B 100%);
+.seccion-hero h2 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A1A1A6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.subtitulo-seccion {
+.seccion-hero p {
+    font-size: 1.15rem;
     color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 30px;
+    max-width: 800px;
 }
 
-/* ==========================================================================
-   TARJETAS Y GRID REUTILIZABLE
-   ========================================================================== */
+/* Grid de Proyectos y Servicios */
 .contenedor-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }
 
@@ -165,79 +165,84 @@ h2 {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-subtle);
+    padding: 30px;
     border-radius: var(--radius-main);
-    padding: 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    box-shadow: var(--shadow-apple);
 }
 
 .tarjeta-proyecto:hover {
     background: var(--bg-card-hover);
     border-color: rgba(255, 255, 255, 0.25);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-apple);
+    transform: translateY(-5px);
+}
+
+.tarjeta-proyecto.destacada {
+    border-color: rgba(41, 151, 255, 0.4);
 }
 
 .tag-badge {
+    display: inline-block;
     font-size: 0.75rem;
-    color: var(--accent-blue);
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
 }
 
 .tarjeta-proyecto h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-primary);
 }
 
 .tarjeta-proyecto p {
     color: var(--text-secondary);
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
 .precio-api {
     color: var(--accent-blue);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
+/* Tags de Tecnologías */
 .tags-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .tags-tech span {
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.78rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
+/* Botones de Proyectos */
 .btn-proyecto {
     display: inline-block;
-    width: 100%;
-    text-align: center;
     background: #0071e3;
     color: #ffffff;
-    padding: 10px 16px;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: var(--radius-sm);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    text-align: center;
     transition: all 0.2s ease;
 }
 
@@ -255,7 +260,7 @@ h2 {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Loading Box */
+/* Estado de Carga (Spinner) */
 .loading-box {
     grid-column: 1 / -1;
     text-align: center;
@@ -263,40 +268,54 @@ h2 {
     color: var(--text-secondary);
 }
 
-/* ==========================================================================
-   FORMULARIO DE CONTACTO
-   ========================================================================== */
+.spinner {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    border-top-color: var(--accent-blue);
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Formulario de Contacto */
 .box-contacto {
     background: var(--bg-card);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-subtle);
-    padding: 32px;
+    padding: 40px;
     border-radius: var(--radius-main);
-    max-width: 600px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-apple);
 }
 
 .campo {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input, textarea {
     width: 100%;
     padding: 14px 16px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-subtle);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: var(--text-primary);
     font-family: var(--font-apple);
     font-size: 0.95rem;
@@ -312,9 +331,9 @@ input:focus, textarea:focus {
 .btn-submit {
     width: 100%;
     background: #0071e3;
-    color: white;
-    padding: 14px;
+    color: #ffffff;
     border: none;
+    padding: 14px;
     border-radius: var(--radius-sm);
     font-size: 1rem;
     font-weight: 600;
@@ -331,8 +350,9 @@ input:focus, textarea:focus {
     margin-top: 15px;
     padding: 12px;
     border-radius: var(--radius-sm);
-    display: none;
     font-size: 0.9rem;
+    display: none;
+    text-align: center;
 }
 
 .feedback-box.exito {
@@ -342,42 +362,27 @@ input:focus, textarea:focus {
     border: 1px solid rgba(48, 209, 88, 0.3);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+/* Footer */
 footer {
     border-top: 1px solid var(--border-subtle);
-    padding: 30px 20px;
+    padding: 30px 24px;
     text-align: center;
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE MÓVIL < 600PX)
-   ========================================================================== */
-@media (max-width: 600px) {
+/* Responsive */
+@media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 12px;
     }
 
+    .seccion-hero h2 {
+        font-size: 2rem;
+    }
+
     h2 {
-        font-size: 1.75rem;
-    }
-
-    .contenedor {
-        padding: 20px 15px;
-    }
-
-    .box-contacto {
-        padding: 20px;
+        font-size: 1.8rem;
     }
 }
