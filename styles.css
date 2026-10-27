@@ -48,7 +48,7 @@ footer {
     padding: 10px;
 }
 
-.card-proyecto {
+.contenedor-proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fill,
     minmax(220px, 1fr));
